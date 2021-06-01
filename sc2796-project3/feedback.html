@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ithaca Apple Harvest Festival Feedback Form</title>
+  <link rel="stylesheet" type="text/css" href="styles/site.css"/>
+  <script src="scripts/jquery-3.5.1.js" type="text/javascript"></script>
+  <script src="scripts/validation.js" type="text/javascript" async></script>
+</head>
+<body>
+  <section>
+    <div class="top">
+      <div class="thebox">
+        <div class="topbox">
+          <header>
+            <h1> Welcome to the Ithaca Apple Harvest Festival </h1>
+          </header>
+        </div>
+        <div id="nav">
+          <nav>
+            <ul>
+              <li><a href="index.html">Homepage</a></li>
+              <li><a href="description.html">About</a></li>
+              <li><a href="map.html">Navigation</a></li>
+              <li><a href="product.html">Products Sold</a></li>
+              <li class="live"><a href="feedback.html">Feedback</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="img">
+        <div class="log">
+          <!-- Source: https://cortlandareatribune.com/2017/09/24/35th-annual-apple-harvest-festival/ -->
+          <img src="images/logo.jpg" alt="logo">
+          <div class="logo">
+            Source: <cite><a href="https://cortlandareatribune.com/2017/09/24/35th-annual-apple-harvest-festival/">Logo for the Apple Harvest Festival</a></cite>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <form id="feedBack" method="post" action="https://www.cs.cornell.edu/courses/cs1300/2020fa/submit.php" novalidate>
+      <div id="instructions">
+        ***Please fill out the following form to provide feedback about your experience at the Ithaca Apple Harvest Festival***
+      </div>
+      <div id="nameFeedback" class="error hidden">
+        <p>Please enter your full name</p>
+      </div>
+      <div class="label-and-input">
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name" required/>
+      </div>
+      <div id="emailFeedback" class="error hidden">
+        <p>Please enter your email address</p>
+      </div>
+      <div class="label-and-input">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required/>
+      </div>
+      <div id="transportationFeedback" class="error hidden">
+        <p>Please select how you arrived at the festival</p>
+      </div>
+      <div class="label-and-input">
+        <label for="mode-of-transportation">Primary Mode of Transportation:</label>
+        <select name="mode-of-transportation" id="mode-of-transportation" required>
+          <option value="">Select how you arrived at the festival</option>
+          <option value="car">Car</option>
+          <option value="bus">Bus</option>
+          <option value="taxi-uber-lyft">Taxi/Uber/Lyft</option>
+          <option value="bike">Bike</option>
+          <option value="walking">Walking</option>
+        </select>
+      </div>
+      <div id="attendeeFeedback" class="error hidden">
+        <p>Please select the number of visitors (including yourself; please select a number greater than 0)</p>
+      </div>
+      <div class="label-and-input">
+        <label for="number-of-attendees">Number of Attendee(s):</label>
+        <input type="number" name="number-of-attendees" id="number-of-attendees" value="0" min="1" required>
+      </div>
+      <div id="experienceFeedback" class="error hidden">
+        <p>Please write about your experiences at the festival today</p>
+      </div>
+      <div class="label-and-input">
+        <label for="how-was-your-experience">How was your experience?</label>
+        <textarea id="how-was-your-experience" name="how-was-your-experience" rows="10" cols="80"></textarea>
+      </div>
+      <div id="end">
+        <div id="activitiesFeedback" class="error-final hidden">
+          <p>Please click on all of the boxes below for all of the activitie(s) that you participated in</p>
+        </div>
+        <div class="lastP">
+          Please select all of the activitie(s) that you participated in:
+        </div>
+        <div class="label-and-input-check">
+          <div class="box">
+            <div class="inputer">
+              <input type="checkbox" id="activity-one" name="activity-one" value="giveaway">
+            </div>
+            <div class="labeler">
+              <label for="activity-one">I participated in the giveaway</label>
+            </div>
+          </div>
+          <div class="box">
+            <div class="inputer">
+              <input type="checkbox" id="activity-two" name="activity-two" value="craft-cider-tasting">
+            </div>
+            <div class="labeler">
+              <label for="activity-two">I participated in the craft cider tasting</label>
+            </div>
+          </div>
+          <div class="box">
+            <div class="inputer">
+              <input type="checkbox" id="activity-three" name="activity-three" value="live-performance">
+            </div>
+            <div class="labeler">
+              <label for="activity-three">I watched the live performances</label>
+            </div>
+          </div>
+          <div class="box">
+            <div class="inputer">
+              <input type="checkbox" id="activity-four" name="activity-four" value="apple-harvest-trail">
+            </div>
+            <div class="labeler">
+              <label for="activity-four">I participated in the Apple Harvest Trail</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="submit" name="send" id="send">Submit Feedback</button>
+    </form>
+  </section>
+</body>
+</html>
